@@ -1,0 +1,53 @@
+buildscript {
+    repositories {
+        jcenter()
+        maven { url 'http://dl.bintray.com/content/aalmiray/kordamp' }
+        maven { url  'http://dl.bintray.com/melix/jbake-gradle-plugin' }
+        mavenLocal()
+    }
+    dependencies {
+        classpath 'org.kordamp:markdown-gradle-plugin:0.1.1'
+        classpath 'me.champeau.gradle:jbake-gradle-plugin:0.1'
+        classpath 'org.freemarker:freemarker:2.3.19'
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'org.kordamp.gradle.markdown'
+apply plugin: 'jbake'
+
+def arc42InputDir = 'src/arc42-markdown/'
+def jbakeDir = 'src/jbake/'
+def graphvizdotExe = '/usr/local/bin/dot'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'net.sourceforge.plantuml:plantuml:8020'
+}
+
+task generatePlantumlImages(type: JavaExec) {
+    main 'net.sourceforge.plantuml.Run'
+    classpath configurations.runtime
+    environment GRAPHVIZ_DOT: graphvizdotExe
+    args arc42InputDir + '**/*.puml'
+}
+
+task copyMarkdown(type: Copy) {
+    from(arc42InputDir) {
+        include '**/*.md'
+    }
+    into jbakeDir + 'content/'
+}
+
+task copyUml(type: Copy) {
+    from(arc42InputDir) {
+        include '**/*.png'
+    }
+    into jbakeDir + 'assets/'
+    includeEmptyDirs = false
+}
+
+defaultTasks 'generatePlantumlImages', 'copyMarkdown', 'copyUml', 'jbake'

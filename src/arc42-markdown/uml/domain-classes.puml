@@ -1,0 +1,8 @@
+@startuml
+
+class ExampleParent
+class ExampleChild
+
+ExampleParent <|-- ExampleChild
+
+@enduml
