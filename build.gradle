@@ -18,7 +18,6 @@ apply plugin: 'jbake'
 
 def arc42InputDir = 'src/arc42-markdown/'
 def jbakeDir = 'src/jbake/'
-def graphvizdotExe = '/usr/local/bin/dot'
 
 repositories {
     mavenCentral()
@@ -31,7 +30,7 @@ dependencies {
 task generatePlantumlImages(type: JavaExec) {
     main 'net.sourceforge.plantuml.Run'
     classpath configurations.runtime
-    environment GRAPHVIZ_DOT: graphvizdotExe
+//    environment GRAPHVIZ_DOT: '/path/to/dot'
     args arc42InputDir + '**/*.puml'
 }
 
