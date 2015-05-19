@@ -41,7 +41,7 @@ task copyMarkdown(type: Copy) {
     into jbakeDir + 'content/'
 }
 
-task copyUml(type: Copy) {
+task copyGraphics(type: Copy) {
     from(arc42InputDir) {
         include '**/*.png'
     }
@@ -49,4 +49,4 @@ task copyUml(type: Copy) {
     includeEmptyDirs = false
 }
 
-defaultTasks 'generatePlantumlImages', 'copyMarkdown', 'copyUml', 'jbake'
+defaultTasks 'generatePlantumlImages', 'copyMarkdown', 'copyGraphics', 'jbake'
