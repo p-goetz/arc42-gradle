@@ -1,3 +1,8 @@
 body {
     padding-top: 70px;
 }
+
+a.anchor {
+    padding-top: 40px;
+    margin-top: -40px;
+}

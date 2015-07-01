@@ -39,6 +39,11 @@ task copyMarkdown(type: Copy) {
         include '**/*.md'
     }
     into jbakeDir + 'content/'
+    filter { line ->
+        line.replaceAll(/\[(.*)\]\((.*)(\.md)(.*)\)/) { all, caption, preSuffix, suffix, postSuffix ->
+            "[${caption}](${preSuffix}.html${postSuffix})"
+        }
+    }
 }
 
 task copyGraphics(type: Copy) {
