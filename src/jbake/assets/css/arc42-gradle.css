@@ -6,3 +6,7 @@ a.anchor {
     padding-top: 40px;
     margin-top: -40px;
 }
+
+th {
+    text-align: center;
+}
