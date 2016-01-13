@@ -1,0 +1,10 @@
+# IDE specific
+build/
+.idea/
+.gradle/
+
+*.iml
+
+# generated files
+src/jbake/content/
+
