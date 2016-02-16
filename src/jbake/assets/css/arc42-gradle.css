@@ -24,7 +24,15 @@ img {
 }
 
 .row-paging {
-    margin: 40px 0px;
     padding: 5px 0px;
+}
+
+.row-paging-top {
+    margin-bottom: 40px;
+    border-bottom: 1px solid lightgray;
+}
+
+.row-paging-bottom {
+    margin-top: 40px;
     border-top: 1px solid lightgray;
 }
