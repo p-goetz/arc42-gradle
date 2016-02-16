@@ -1,8 +1,8 @@
-title=Kontextabgrenzung
+title=3. Kontextabgrenzung
 type=page
 status=published
 ~~~~~~
 
-## Fachlicher Kontext
+## 3.1 Fachlicher Kontext
 
-## Technischer- oder Verteilungskontext
+## 3.2 Technischer- oder Verteilungskontext

@@ -2,6 +2,10 @@ body {
     padding-top: 70px;
 }
 
+h5 {
+    font-weight: bold;
+}
+
 a.anchor {
     padding-top: 40px;
     margin-top: -40px;
@@ -9,4 +13,18 @@ a.anchor {
 
 th {
     text-align: center;
+}
+
+table ol, table ul {
+    margin-bottom: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+.row-paging {
+    margin: 40px 0px;
+    padding: 5px 0px;
+    border-top: 1px solid lightgray;
 }

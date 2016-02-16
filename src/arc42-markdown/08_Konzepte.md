@@ -1,11 +1,11 @@
-title=Konzepte
+title=8. Konzepte
 type=page
 status=published
 ~~~~~~
 
-## Fachliche Strukturen und Modelle
+## 8.1 Fachliche Strukturen und Modelle
 
-## Typische Muster und Strukturen
+## 8.2 Typische Muster und Strukturen
 
 ## Persistenz
 

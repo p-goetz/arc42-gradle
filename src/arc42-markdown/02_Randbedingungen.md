@@ -1,10 +1,10 @@
-title=Randbedingungen
+title=2. Randbedingungen
 type=page
 status=published
 ~~~~~~
 
-## Technische Randbedingungen
+## 2.1 Technische Randbedingungen
 
-## Organisatorische Randbedingungen
+## 2.2 Organisatorische Randbedingungen
 
-## Konventionen
+## 2.3 Konventionen

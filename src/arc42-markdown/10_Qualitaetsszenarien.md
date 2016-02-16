@@ -1,8 +1,8 @@
-title=Qualitätsszenarien
+title=10. Qualitätsszenarien
 type=page
 status=published
 ~~~~~~
 
-## Qualitätsbaum
+## 10.1 Qualitätsbaum
 
-## Bewertungsszenarien
+## 10.2 Bewertungsszenarien

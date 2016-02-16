@@ -30,7 +30,13 @@
     <p>Dieses Maven Projekt kann als Template frei und ohne Einschränkungen verwendet und verändert werden und ist als
         <a href="lizenz.html">Beerware</a> lizenziert</p>
 
-    <p><i>Peter Götz</i> (<a class="externalLink" href="mailto:peter.s.goetz@gmail.com">peter.s.goetz@gmail.com</a>)</p>
+    <div class="row">
+        <p><a href="01_Einfuehrung-und-Ziele.html" class="pull-right">&gt;&gt; 1. Einführung und Ziele</a></p>
+    </div>
+
+    <div class="row">
+        <p><i>Peter Götz</i> (<a class="externalLink" href="mailto:peter.goetz@pgoetz.de">peter.goetz@pgoetz.de</a>)</p>
+    </div>
 
 <#include "footer.ftl">
 </body>
