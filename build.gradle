@@ -34,11 +34,29 @@ task generatePlantumlImages(type: JavaExec) {
     args arc42InputDir + '**/*.puml'
 }
 
-task copyMarkdown(type: Copy) {
-    from(arc42InputDir) {
-        include '**/*.md'
+task addPagesToSearch(type: Copy) {
+    from 'src/assets/'
+    into jbakeDir + 'assets/js/'
+    include 'arcdoc.js'
+    filter { line ->
+        def pages = ''
+
+        fileTree(dir: arc42InputDir, include: '**/*.md').each {
+            def path = it.path
+            def startIndex = path.indexOf(arc42InputDir) + arc42InputDir.length()
+            def page = path.getAt(startIndex..-3) + "html"
+
+            pages += '"' + page + '", '
+        }
+
+        line.replaceAll('/\\* DO NOT REMOVE, WILL BE FILLED BY GRADLE \\*/', pages[0..-3])
     }
+}
+
+task copyMarkdown(type: Copy) {
+    from arc42InputDir
     into jbakeDir + 'content/'
+    include '**/*.md'
     filter { line ->
         line.replaceAll(/\[(.*)\]\((.*)(\.md)(.*)\)/) { all, caption, preSuffix, suffix, postSuffix ->
             "[${caption}](${preSuffix}.html${postSuffix})"
@@ -47,11 +65,10 @@ task copyMarkdown(type: Copy) {
 }
 
 task copyGraphics(type: Copy) {
-    from(arc42InputDir) {
-        include '**/*.png'
-    }
+    from arc42InputDir
     into jbakeDir + 'assets/'
+    include '**/*.png'
     includeEmptyDirs = false
 }
 
-defaultTasks 'generatePlantumlImages', 'copyMarkdown', 'copyGraphics', 'jbake'
+defaultTasks 'generatePlantumlImages', 'addPagesToSearch', 'copyMarkdown', 'copyGraphics', 'jbake'

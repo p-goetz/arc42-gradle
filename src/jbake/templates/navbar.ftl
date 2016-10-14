@@ -25,6 +25,12 @@
                     </ul>
                 </li>
             </ul>
+            <form id="search-form" class="navbar-form navbar-right">
+                <div class="form-group">
+                    <input name="query" type="text" class="form-control" placeholder="Suchbegriff">
+                </div>
+                <button type="submit" class="btn btn-default">Suchen</button>
+            </form>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="lizenz.html">Lizenz</a></li>
             </ul>

@@ -25,9 +25,11 @@
         </p>
     </div>
 
-    <h1>${content.title}</h1>
+    <div id="content">
+        <h1>${content.title}</h1>
 
-${content.body}
+    ${content.body}
+    </div>
 
     <div class="row row-paging row-paging-bottom">
         <p>

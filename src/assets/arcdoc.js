@@ -1,4 +1,4 @@
-var pages = ["01_Einfuehrung-und-Ziele.html", "02_Randbedingungen.html", "03_Kontextabgrenzung.html", "04_Loesungsstrategie.html", "05_Bausteinsicht.html", "06_Laufzeitsicht.html", "07_Verteilungssicht.html", "08_Konzepte.html", "09_Entwurfsentscheidungen.html", "10_Qualitaetsszenarien.html", "11_Risiken.html", "12_Glossar.html", "lizenz.html"];
+var pages = [/* DO NOT REMOVE, WILL BE FILLED BY GRADLE */];
 
 $(document).ready(function () {
     $(".container img").addClass("img-responsive");
