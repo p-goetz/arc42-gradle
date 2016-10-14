@@ -24,7 +24,7 @@
     <p><img src="uml/domain-classes.png" alt="Beispiel UML-Modell"></p>
 
     <p>Über den Aufruf von <code>gradle</code> wird die Dokumentation erzeugt und unter <code>build/jbake</code>
-        abgelegt. Für die Transformation der Markdown-Dateien wird <a class="externalLink" href="" http://www.jbake.org/">JBake</a>
+        abgelegt. Für die Transformation der Markdown-Dateien wird <a class="externalLink" href="http://www.jbake.org/">JBake</a>
         verwendet. </p>
 
     <p>Dieses Maven Projekt kann als Template frei und ohne Einschränkungen verwendet und verändert werden und ist als
